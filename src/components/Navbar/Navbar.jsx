@@ -5,18 +5,18 @@ import {
   Nav, NavContainer, NavIcon, NavLogo, MobileIcon,NavItem,Navlinks,NavMenu
 
 } from './Navbar.element'
+import { Button } from '../../GloblesStyles'
 function Navbar() {
   const [click, setClick] = useState(false)
 
   const handelClick=()=>setClick(!click);
   return (
-    <IconContext.Provider value={{color:'#fff'}}>
+    <IconContext.Provider value={{color:'#b31919'}}>
       <Nav>
         <NavContainer>
           <NavLogo to='/'>
             <NavIcon />
             Radim
-
           </NavLogo>
           <MobileIcon onClick={handelClick}>{click ? <FaTimes /> : <FaBars />}</MobileIcon>
            <NavMenu  onClick={handelClick} click={click} >
@@ -29,8 +29,8 @@ function Navbar() {
             <NavItem>
               <Navlinks to='/'>Products</Navlinks>
             </NavItem>
-          
-
+           
+             
            </NavMenu>
         </NavContainer>
       </Nav>
